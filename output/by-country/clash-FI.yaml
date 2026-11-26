@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇱 PL 01 - xiaohe
+- name: 🇫🇮 FI 01 - xiaohe
   type: vless
-  server: 46.243.232.149
+  server: mail3.besttotaldns.com
   port: 443
-  uuid: b432a23a-acff-425c-bf69-70480cd6ed09
+  uuid: 18fe142e-1522-47ae-af55-bd8daf6273df
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: e2.cdnwh.icu
+  servername: mail3.besttotaldns.com
   network: ws
   ws-opts:
-    path: /stream/segment/3078a41dd7eb/
+    path: /wo9a5v3jcz
     headers:
-      Host: e2.cdnwh.icu
+      Host: mail3.besttotaldns.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇵🇱 PL 01 - xiaohe
+  - 🇫🇮 FI 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇱 PL 01 - xiaohe
+  - 🇫🇮 FI 01 - xiaohe
 rules:
 - MATCH,PROXIES
